@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            font-family: "agency fb";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0e92b3;
+        }
+        .input-wrapped{
+            background-color: rgb(41, 45, 62);
+            border: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 15px;
+            color: #fff;
+            outline: none;
+        }
+        .form-group {
+            width: 300px;
+            background-color: rgb(41, 45, 62);
+            color: #fff;
+            border-radius: 2px;
+            padding: 50px;
+            height: 20px;
+            background-image: linear-gradient(to right, #E7C737 0%, #28B35B 50%, transparent 0%);
+            background-size: 20px 0px;
+            background-repeat: repeat-x;
+        }
+        .form-control{
+            height: calc(100% - 4px);
+            width: calc(100% - 4px);
+            border-radius: 30px;
+        }
+        .action{
+            display: flex;
+            justify-content: center;
+        }
+        .btn-primary{
+            width: 60%;
+            text-transform: uppercase;
+            border: 2px solid #0e92b3;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 30px;
+            cursor: pointer;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <form class="form-wrapped" th:action="@{/add}" method="Post">
+        <div class="input-wrapped">
+            <div class="form-group">
+                <label>姓名</label>
+                <input type="text" name="name" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
+                <label>邮箱</label>
+                <input type="email" name="email" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
+                <label>住址</label>
+                <input type="text" name="address" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
+                <label>QQ号</label>
+                <input type="text" name="QQnum" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
+                <label>电话</label>
+                <input type="text" name="tel" class="form-control" placeholder="">
+            </div>
+        </div>
+        <div class="action">
+            <button type="submit " class="btn btn-primary">提交</button>
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: "agency fb";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0e92b3;
+}
+
+.form-wrapped {
+    width: 300px;
+    background-color: rgb(41, 45, 62);
+    color: #fff;
+    border-radius: 2px;
+    padding: 50px;
+}
+
+.form-wrapped .header {
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    line-height: 100px;
+}
+
+.form-wrapped .input-wrapped input {
+    background-color: rgb(41, 45, 62);
+    border: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    outline: none;
+}
+
+.form-wrapped .input-wrapped input::placeholder {
+    font-family: "agency fb";
+    text-transform: uppercase;
+}
+
+.form-wrapped .input-wrapped .border-wrapped {
+    background-image: linear-gradient(to right, #e8198b, #0eb4dd);
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.form-wrapped .input-wrapped .border-wrapped .border-item {
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+    border-radius: 30px;
+}
+.form-wrapped .action {
+    display: flex;
+    justify-content: center;
+}
+.form-wrapped .action .btn {
+    width: 60%;
+    text-transform: uppercase;
+    border: 2px solid #0e92b3;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.form-wrapped .action .btn:hover {
+    background-color: #0e92b3;
+}
