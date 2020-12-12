@@ -58,11 +58,36 @@
             line-height: 50px;
             border-radius: 30px;
             cursor: pointer;
-
+            position: relative;
+            top: 40px;
         }
 
-
     </style>
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+
+    <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+    <script>
+        function a1() {
+            $.ajax({
+                url: "/user/checkUser.action",
+                data: {'tel': $("#tel").val()},
+                success: function (data) {
+                    console.log(data);
+                    if (data== "OK") {
+                        $("#telInfo").css("color", "green");
+
+                    } else {
+                        $("#telInfo").css("color", "red");
+                    }
+                    $("#telInfo").html(data);
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <form class="form-wrapped" th:action="@{/add}" method="Post">
@@ -85,13 +110,22 @@
             </div>
             <div class="form-group">
                 <label>电话</label>
-                <input type="text" name="tel" class="form-control" placeholder="">
+                <input type="text" name="tel" class="form-control" placeholder="" onblur="a1()" id="tel">
+                <span id="telInfo" ></span>
+                <br>
             </div>
+
         </div>
         <div class="action">
             <button type="submit " class="btn btn-primary">提交</button>
         </div>
-
+<!--        <p>-->
+<!--            id:-->
+<!--            <input type="text" id="id" onblur="a1()"/>-->
+<!--            <span id="idInfo" ></span>-->
+<!--        </p>-->
     </form>
+
+
 </body>
 </html>

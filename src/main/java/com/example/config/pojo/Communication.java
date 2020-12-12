@@ -16,6 +16,15 @@ public class Communication {
         this.QQnum=QQnum;
         this.tel=tel;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
     private Integer Id;
     private String name;
     private String Email;

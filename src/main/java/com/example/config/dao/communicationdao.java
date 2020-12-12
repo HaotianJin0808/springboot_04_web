@@ -10,7 +10,7 @@ import java.util.Map;
 @Repository
 public class communicationdao {
 
-    private static Map<Integer, Communication> people =null;
+    public static Map<Integer, Communication> people =null;
 
     static{
         people=new HashMap<Integer, Communication>();
@@ -20,10 +20,15 @@ public class communicationdao {
     }
 
     public static Collection<Communication> getAll(){
+
         return people.values();
     }
     public Communication getPersonById(Integer Id){
+
         return people.get(Id);
+    }
+    public Communication getPersonByTel(String tel){
+        return people.get(tel);
     }
     private static Integer intiId = 4;
     public void addPerson(Communication person){
